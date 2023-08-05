@@ -1565,7 +1565,7 @@ def cli_infer(com):
     protection_amnt = float(com[12])
     protect1 = 0.5
 
-    if com[14] == "False" or com[14] == "false":
+    if com[13] == "False" or com[13] == "false":
         DoFormant = False
         Quefrency = 0.0
         Timbre = 0.0
@@ -1575,8 +1575,8 @@ def cli_infer(com):
 
     else:
         DoFormant = True
-        Quefrency = float(com[15])
-        Timbre = float(com[16])
+        Quefrency = float(com[14])
+        Timbre = float(com[15])
         CSVutil(
             "csvdb/formanting.csv", "w+", "formanting", DoFormant, Quefrency, Timbre
         )
