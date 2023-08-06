@@ -1,3 +1,13 @@
+## Docker setup
+Build image
+```
+docker build -t mangio-rvc-fork -f Dockerfile_cuda .
+```
+Run container with vscode dev container configuration
+
+**Note**: If error not input for ffmpeg do this fix: https://github.com/kkroening/ffmpeg-python/issues/174 
+
+
 # 7/28 Changelog:
 - Undo SQL change for the sake of stability, uses csv now
 - Merging checkpoints bug has been resolved

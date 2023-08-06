@@ -1,0 +1,25 @@
+{
+    "name": "Mangio-RVC-Fork",
+  
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mangio-rvc-fork:latest",
+  
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+  
+    "customizations": {
+      "vscode": {
+        "settings": {},
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ]
+      }
+    },
+    "remoteUser": "root",
+    "runArgs": [
+      "--runtime=nvidia",
+      "--gpus",
+      "all"
+    ]
+  }
