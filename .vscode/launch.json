@@ -4,29 +4,21 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        // {
-        //     "name": "onnx_inference_demo",
-        //     "type": "python",
-        //     "request": "launch",
-        //     // "program": "${workspaceFolder}/tools/onnx_inference_demo.py",
-        //     "module": "tools.onnx_inference_demo",
-        //     "console": "integratedTerminal"
-        // }
         {
-            "name": "onnx_inference_demo",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "name": "Infer Web",
+            "name": "Web Inference",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/infer-web.py",
             "args": ["--pycmd", "python", "--port", "3000"],
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "name": "CLI Inference",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/infer-web.py",
+            "args": ["--pycmd", "python", "--is_cli"],
+            "console": "integratedTerminal"
+        }, 
     ]
 }
